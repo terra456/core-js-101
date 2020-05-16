@@ -67,8 +67,10 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, John Doe!' => 'John Doe'
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
-function extractNameFromTemplate(/* value */) {
-  throw new Error('Not implemented');
+function extractNameFromTemplate(value) {
+  // throw new Error('Not implemented');
+  const newStr = value.replace(/!/i, '');
+  return newStr.replace(/Hello, /i, '');
 }
 
 
@@ -145,6 +147,7 @@ function removeFirstOccurrences(str, value) {
  */
 function unbracketTag(/* str */) {
   throw new Error('Not implemented');
+  // return str.replace(/<, >/i, '');
 }
 
 
@@ -208,8 +211,8 @@ function getRectangleString(/* width, height */) {
   throw new Error('Not implemented');
   /* const a = '-';
   const b = ' ';
-  const aFirst = '┌' + a.repeat(width) + '┐\n';
-  const aLast = '└' + a.repeat(width) + '┘\n';
+  const aFirst = '┌' + a.repeat(width-2) + '┐\n';
+  const aLast = '└' + a.repeat(width-2) + '┘\n';
   const bStr = '|' + b.repeat(width) + '|\n';
   return aFirst + bStr.repeat(height) + aLast; */
 }
