@@ -36,17 +36,12 @@ function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(/* len */) {
-  throw new Error('Not implemented');
+function generateOdds(len) {
+  // throw new Error('Not implemented');
   // возвращаетс не пустой массив и с переносом строки
-  /* let j = -1;
-  let arr = new Array(len);
-  arr = arr.map(() => {
-    j += 2;
-    return j;
-  });
-  return len === 0 ? [] : arr;
-  */
+  const arr = new Array(len);
+  arr.fill(1);
+  return arr.map((el, index) => el + 2 * index);
 }
 
 
@@ -256,12 +251,8 @@ function toArrayOfSquares(arr) {
  */
 function getMovingSum(/* arr */) {
   throw new Error('Not implemented');
-  /* const sum = 0;
-  return arr.map(function callback(el) {
-    this.sum += el;
-    return this.sum;
-  }, sum);
-  */
+  /* let sum = 0;
+  return arr.map((el) => sum += el); */
 }
 
 /**
@@ -275,9 +266,9 @@ function getMovingSum(/* arr */) {
  * [ 'a', 'b', 'c' , null ]  => [ "b", null ]
  * [ "a" ] => []
  */
-function getSecondItems(/* arr */) {
-  throw new Error('Not implemented');
-  // return arr.filter((el) => el.indexOf % 2 === 0);
+function getSecondItems(arr) {
+  // throw new Error('Not implemented');
+  return arr.filter((el, index) => (index + 1) % 2 === 0);
 }
 
 

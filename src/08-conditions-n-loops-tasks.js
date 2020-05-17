@@ -194,6 +194,21 @@ function isInsideCircle(/* circle, point */) {
  */
 function findFirstSingleChar(/* str */) {
   throw new Error('Not implemented');
+  /* for (let i = 0; i < str.length; i += 1) {
+    const elem = str[i];
+    if (str.includes(elem, i + 1) === false) {
+      return elem;
+    }
+  }
+  return null;
+
+  const arr = Array.from(str);
+  let res = '';
+  for (let i = arr.length-1; i >= 0; i += 1) {
+    const elem = arr[i];
+    res = arr.find(elem);
+  }
+  return (res === undefined) ? null : res; */
 }
 
 
